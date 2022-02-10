@@ -15,7 +15,6 @@ struct ContentView: View {
     var body: some View {
         VStack{
             TabView {
-                
                 if let _ = model.user {
                     HomeView()
                         .tabItem {
@@ -32,12 +31,11 @@ struct ContentView: View {
                         .tabItem {
                             Label("Se connecter", systemImage: "person.fill")
                         }
-
                 }
-                }
-                
-            }.environmentObject(model)
-        }
+            }
+        }.environmentObject(model)
+        
+    }
 }
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
